@@ -5,7 +5,7 @@ class solution:
 		ret = ""        
 		for i, j in enumerate(ints):
 			while num >= j:
-				ret += strs[i]
+				ret += roms[i]
 				num -= j
 			if num == 0:
 				return ret
