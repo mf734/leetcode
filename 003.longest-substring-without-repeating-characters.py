@@ -5,13 +5,15 @@
 class solution:
 	def lengthOfLongestSubstring(self, s):
 		seen = {}
+		# max_length是最长子串的长度，start是子串的初始指针
 		max_length = start = 0
 		for i, c in enumerate(s):
-			# if c in seen, 
-			# start will eliminate any repeating char by +1
+			# if c in seen
+			# start will skip repeating chars by +1
 			if c in seen and start <= seen[c]:
 				start = seen[c] + 1
 			else:
 				max_length = max(max_length, i-start+1)
+			# 把c存入seen
 			seen[c] = i
 		return max_length

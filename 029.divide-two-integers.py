@@ -5,7 +5,6 @@ class Solution(object):
 		dividend = abs(dividend)
 		divisor = abs(divisor)
 		result = 0
-		# 一直让divisor大于dividend
 		while dividend >= divisor:
 			x = 0
 			# divisor*(2^x) is just >= dividend

@@ -1,11 +1,13 @@
 class Solution(object):
 	def searchRange(self, nums, target):
+		# 左和右的target的条件不一样
+		# 左的x>A[mid]，会使得在mid已经定位到target后，仍然把right往左边赶，这样就尽可能找到低处的target
+		# 右的x>=A[mid]，会使得在mid已经定位到target后，就将left往右边顶，这样就会尽可能定位到高处的target
 		def binarySearchLeft(A, x):
 			left, right = 0, len(A) - 1
 			while left <= right:
-				mid = left + (right - left)//2
-				# mid = (left+right)>>1
-				# 为了避免左边和右边搜索到同一个target，所以左边的只用>而右边的要用>=
+				# mid = left + (right - left)//2
+				mid = (left+right)>>1
 				if x > A[mid]: 
 					left = mid + 1
 				else: 
@@ -14,8 +16,8 @@ class Solution(object):
 		def binarySearchRight(A, x):
 			left, right = 0, len(A) - 1
 			while left <= right:
-				mid = left + (right - left)//2
-				# mid = (left+right)>>1
+				# mid = left + (right - left)//2
+				mid = (left+right)>>1
 				if x >= A[mid]: 
 					left = mid + 1
 				else: 

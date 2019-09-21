@@ -1,13 +1,14 @@
 class Solution(object):
 	def threeSum(self, nums):
-		res = []
 		nums.sort()
+		res = []
 		# use one pointer to iterate the nums
 		for i in range(len(nums)-2):
-			# if there is a duplicated numers
-			# use i-1 and i>0 so it can save some times
+			 #这个条件可加可不加，但是只适用于3sum，4sum或者3sum的closest都不行
 			if nums[i] > 0:
 				break
+			
+			# 剪枝
 			if i > 0 and nums[i] == nums[i - 1]:
 				continue			
 			# since everything before i is already checked

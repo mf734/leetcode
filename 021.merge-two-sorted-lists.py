@@ -15,7 +15,7 @@ class Solution(object):
 			head.next = l2
 		return dummy.next
 	
-	def recurMer(self, l1, l2):
+	def recurMer(self, a, b):
 		if a and b:
 			if a.val > b.val:
 				a, b = b, a
