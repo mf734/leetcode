@@ -1,4 +1,5 @@
 class Solution(objecct):        
+	# 415是两个string相加，可以去看
 	def addTwo(self, l1, l2):
 		dummp = p =ListNode(0)
 		carry = 0
@@ -9,6 +10,8 @@ class Solution(objecct):
 			if l2:
 				carry += l2.val
 				l2 = l2.next
+			# 为什么没有if carry呢？因为carry是0的话就不能判断了
+			# 比如l1 l2都是0的时候，循环进去了，但是carry是0，不能成node
 			p.next = ListNode(carry%10)
 			p = p.next
 			carry //= 10
