@@ -21,3 +21,9 @@ class Solution(object):
 		if ans < -2**31:
 			return -2**31
 		return ans
+
+'''
+先用strip去空格，再用sign记录符号
+这里也是处理digit，但是不用进位（因为没有运算）
+所以直接ans = ans*10 + c就行
+'''

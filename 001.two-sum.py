@@ -16,3 +16,7 @@ def bruteForce(self, nums, target):
 				return [i, j]
 			else:
 				j += 1
+'''
+字典的考察，seen的运用
+虽然双指针也可以用，但是配合seen，一次iteration就可以快速查看它是否被遍历过
+'''

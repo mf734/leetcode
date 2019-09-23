@@ -13,3 +13,9 @@ class Solution(object):
 			index += step
 		return ''.join(L)
 
+'''
+这题的重点是能想到用step来决定遍历的方向，然后用数组的直接+的特性。
+也可以引申到二维数组。
+''.join(L)是一个很好用的，将iterable转成string的方法。
+这一例就是将L中的元素用''（就是空）拼起来。
+'''

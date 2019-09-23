@@ -19,3 +19,9 @@ class Solution(object):
 	# Pathonic
 	def isPalindrom3(self, x):
 		return str(x) == str(x)[::-1]
+
+'''
+1，可以通过将数字转化成字符串，然后翻转字符串，来直接reverse数字
+2，既然是通过翻转来记录数字，那么虽然不需要进位，但是需要用%和//将x导入进y
+3，边界：y最后//10的时候，可能会比x大，此时需要退一步来看是否一样
+'''

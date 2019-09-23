@@ -17,3 +17,10 @@ class Solution(object):
 				elif s > target:
 					r -= 1
 		return res
+'''
+思维和3sum一模一样，但是判断条件不一样
+3sum是找到一组解以后，手动推动程序继续执行，包括手动去重
+而这一例，while会自动把所有的iter给走完，
+所以只需要通过s和target来控制l和r的走向
+然后每次比较差值（是否closest）就可
+'''

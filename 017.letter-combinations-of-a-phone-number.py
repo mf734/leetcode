@@ -1,7 +1,5 @@
 class Solution(object):
 	def letterCombinations(self, digits):
-		# note: 很奇怪，如果将以下字典中的int改成string，意外的慢了很多。
-		# 如果想将int改成string，需要将digit那一行注释掉
 		mapping = {1: "", 2: "abc", 3: "def", 4: "ghi", 5: "jkl", 6: "mno", 7: "pqrs", 8: "tuv", 9: "wxyz"}
 		# index是现在digit中的位数，path是一种组合(列表type），即每一位选一个字母
 		def dfs(index, path):
@@ -26,9 +24,7 @@ class Solution(object):
 	
 class Solution2(object):
 	def letterComb(self, digits):
-		# 我将mapping中的数字char全部改成了int，这样会快一点
 		mapping = {2: 'abc', 3: 'def', 4: 'ghi', 5: 'jkl', 6: 'mno', 7: 'pqrs', 8: 'tuv', 9: 'wxyz'}
-		# 用len判断比用not digits要快一点
 		if len(digits) == 0:
 			return []
 		# 这就是recursion的跳出点
@@ -45,3 +41,20 @@ class Solution2(object):
 		prev = self.letterComb(digits[:-1])
 		add = mapping[int(digits[-1])]
 		return [s + c for s in prev for c in add]
+
+'''
+字典的运用
+学到的知识：
+1，用len判断比用not digits要快一点
+2，字典中int比str快，那么str就是'int'
+   这一题中，因为给的输入是str，所以需要用int()函数转化
+3, DFS。不断地recursion。
+   第一种方法是从0往len挖，每挖一次就把这个digit对应的mapping给记录到path中
+   挖到底了就将整个path输出到结果
+   第二种方法是每次从后往前传字符串的slice
+   传到最深处（就是第一个）的时候，开始mapping
+
+   两种方法策略一样，方式不一样。
+   一个从前往后，先mapping，再记录路径，最后直接传结果
+   一个从后往前，先记录路径，最后才mapping
+'''

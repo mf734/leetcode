@@ -6,3 +6,12 @@ class Solution(object):
 				nums[k] = nums[i]
 				k += 1
 		return k
+
+	# pythonic
+    def removeElement2(self, nums, val):
+        k = 0
+        while k <len(nums):
+            if nums[i] == val:
+                del nums[i]
+            else:
+                i += 1

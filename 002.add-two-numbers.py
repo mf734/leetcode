@@ -1,5 +1,4 @@
 class Solution(objecct):        
-	# 415是两个string相加，可以去看
 	def addTwo(self, l1, l2):
 		dummp = p =ListNode(0)
 		carry = 0
@@ -31,3 +30,13 @@ class Solution(objecct):
 			if l2: l2 = l2.next
 		if carry: head.next = ListNode(1)
 		return dummy.next
+
+'''
+类似题目还有415.两个string相加，043.两个string相乘
+遇到两个链表相加，重点有两个：
+1，如何遍历链表；2，如何处理进位
+1，直接用while or if循环，只要链表中还有元素，就可以继续遍历
+   配合carry，只要有进位，循环就会把最后的进位连接进链
+2，carry%10就是个位的数字，直接记下来
+   carry//=10就是十位的进位，准备下次用
+'''

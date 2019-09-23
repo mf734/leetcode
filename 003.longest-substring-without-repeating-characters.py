@@ -17,3 +17,8 @@ class solution:
 			# 把c存入seen
 			seen[c] = i
 		return max_length
+
+'''
+同样用到了seen，方便考察是否“已经出现过”
+每次有重复出现的，就要更新指针，然后用max看是否长度最长
+'''

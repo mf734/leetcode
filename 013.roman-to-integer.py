@@ -11,3 +11,6 @@ class Solution(object):
 				total += cur
 		total += has[s[-1]]
 		return total
+'''
+这里也是字典的活用，重点是罗马数字的特点（比如4，比如9等这些数字）
+'''
