@@ -21,15 +21,14 @@ class Solution:
 # 二层遍历，从右上角
 class Solution:
 	def Find(self, target, array):
-		if len(array) == 0 or len(array[0]) == 0:
+		if len(matrix) == 0:
 			return False
-		i, j = 0, len(array[0])-1
-
-		while i < len(array[0]) and j >= 0:
-			if array[j][i] < target:
-				i += 1
-			elif array[j][i] > target:
+		i, j = 0, len(matrix)-1
+		while i<=len(matrix[0])-1 and j>=0:
+			if matrix[j][i] > target:
 				j -= 1
+			elif matrix[j][i] < target:
+				i += 1
 			else:
 				return True
 		return False
