@@ -35,3 +35,9 @@ class Solution(object):
 		while "()" in s or "{}" in s or "[]" in s:
 			s = s.replace("()", "").replace("{}","").replace("[]","")
 		return s == ''
+'''
+重点就在map和stack的灵活运用
+只要看到了，就加入stack（有的时候我也叫它为seen），
+然后再通过map去pop掉，并且比较是否这个pop出来的可以和前者成对
+注意，坚持map的时候，一定要查是否为空栈
+'''

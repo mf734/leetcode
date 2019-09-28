@@ -23,4 +23,6 @@ class Solution(object):
 而这一例，while会自动把所有的iter给走完，
 所以只需要通过s和target来控制l和r的走向
 然后每次比较差值（是否closest）就可
+注意事项：1，s一定要放在while里面，否则不会变的
+2，res要先记录三个作为已知的标准点
 '''

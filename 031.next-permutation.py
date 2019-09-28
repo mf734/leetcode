@@ -22,3 +22,7 @@ class Solution(object):
 				break
 		nums[first], nums[second] = nums[second], nums[first]
 		reverse(nums, first+1, n-1)
+
+'''
+
+'''

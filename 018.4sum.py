@@ -37,3 +37,12 @@ class Solution:
 						right -= 1
 					else:
 						left += 1
+
+'''
+不管是三数还是四数，都有一定的套路:
+首先是判空加sort，然后剪枝去重，（可用最小值break掉不必要的数），
+如果要算closet，要先有存储值当作标准
+while l < r，算合，移指针
+如果不是closet而是找target，那么再找到第一个以后，需要手动再次剪枝去重
+
+'''	

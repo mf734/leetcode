@@ -22,3 +22,9 @@ class Solution(object):
 		slow.next = slow.next.next
 		# dummy就是处理空链表的。
 		return dummy.next
+
+'''
+快慢指针拉开距离了以后，当快指针到底时，满指针就在倒数的位置
+这种in place的删除，比如给了index，或者给了value的
+非常适合用快慢指针来找准删除的位置，然后将它给精准删除
+'''
