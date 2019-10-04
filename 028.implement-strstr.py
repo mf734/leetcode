@@ -5,8 +5,7 @@ class Solution(object):
                 return 0
             else:
                 return -1
-                
-        for i in range(0, len(haystack) - len(needle)):
+        for i in range(0, len(haystack) - len(needle)+1):
             k = i # k是haystack的index
             j = 0 # j是记录needle有多少位和haystack相等
             while j < len(needle) and k < len(haystack) and haystack[k] == needle[j]:

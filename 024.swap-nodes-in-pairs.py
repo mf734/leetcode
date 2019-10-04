@@ -30,7 +30,7 @@ recur就负责把传进去的head.next.next和剩下链表做同样的操作，
 			a.next = b.next
 			b.next = a
 			p = a #p = p.next.next
-			# 以上所有可简化为
+			# while循环以后的以上所有可简化为
 			# p.next, b.next, a.next, p = b, a, b.next, a
 		return self.next
 '''

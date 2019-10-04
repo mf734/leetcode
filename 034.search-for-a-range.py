@@ -26,6 +26,12 @@ class Solution(object):
 
 		left, right = binarySearchLeft(nums, target), binarySearchRight(nums, target)
 		return (left, right) if left <= right else [-1, -1]
+'''
+要求是一样的，需要用到二分法
+这里需要确切的找到target的值，所以最后要将lo和hi定位到一个点上才行
+虽然最后的值都会找到，但是如上两个程序中，
+前者会找到靠左的（因为哪怕mid同在target上，它也会优先改right
+'''
 
 
 class Solution2(object):
