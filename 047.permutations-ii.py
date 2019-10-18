@@ -6,7 +6,7 @@ class Solution(object):
 			return []
 		def dfs(nums, path):
 			if not nums:
-				return res.append(path+[])
+				res.append(path+[])
 			for i in range(len(nums)):
 				if i > 0 and nums[i] == nums[i-1]:
 					continue

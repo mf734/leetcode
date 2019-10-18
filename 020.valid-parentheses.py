@@ -13,10 +13,10 @@ class Solution(object):
                 stack.append(char)
         return not stack
 
+
     def isValid1(self, s):
 		if len(s) %2 != 0:
 			return False
-
 		mapping = {"(": ")", "[": "]", "{": "}"}
 		stack = []
 
